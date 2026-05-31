@@ -1,89 +1,59 @@
-// ── Typed text effect ──
-const phrases = [
-  'AI Engineer',
-  'LLM Developer',
-  'NLP Enthusiast',
-  'CS Student @ HUST',
-];
+(function () {
+  // nav scroll state
+  var nav = document.getElementById('nav');
+  function onScroll() {
+    if (window.scrollY > 24) nav.classList.add('scrolled');
+    else nav.classList.remove('scrolled');
+  }
+  window.addEventListener('scroll', onScroll, { passive: true });
+  onScroll();
 
-let phraseIndex = 0;
-let charIndex = 0;
-let deleting = false;
-const typedEl = document.querySelector('.typed-text');
+  // mobile menu
+  var menuBtn = document.getElementById('menuBtn');
+  var navLinks = document.getElementById('navLinks');
+  menuBtn.addEventListener('click', function () { navLinks.classList.toggle('open'); });
+  navLinks.querySelectorAll('a').forEach(function (a) {
+    a.addEventListener('click', function () { navLinks.classList.remove('open'); });
+  });
 
-function type() {
-  const current = phrases[phraseIndex];
-
-  if (!deleting) {
-    typedEl.textContent = current.slice(0, charIndex + 1);
-    charIndex++;
-    if (charIndex === current.length) {
-      deleting = true;
-      setTimeout(type, 1800);
-      return;
-    }
-  } else {
-    typedEl.textContent = current.slice(0, charIndex - 1);
-    charIndex--;
-    if (charIndex === 0) {
-      deleting = false;
-      phraseIndex = (phraseIndex + 1) % phrases.length;
+  // reveal on scroll
+  var reveals = Array.prototype.slice.call(document.querySelectorAll('.reveal'));
+  function reveal() {
+    var vh = window.innerHeight || document.documentElement.clientHeight;
+    for (var i = reveals.length - 1; i >= 0; i--) {
+      var el = reveals[i];
+      var r = el.getBoundingClientRect();
+      if (r.top < vh * 0.92 && r.bottom > 0) {
+        el.classList.add('in');
+        reveals.splice(i, 1);
+      }
     }
   }
+  window.addEventListener('scroll', reveal, { passive: true });
+  window.addEventListener('resize', reveal);
+  reveal();
+  requestAnimationFrame(reveal);
+  setTimeout(function () {
+    document.querySelectorAll('.reveal').forEach(function (el) { el.classList.add('in'); });
+  }, 2200);
 
-  setTimeout(type, deleting ? 60 : 90);
-}
-
-type();
-
-// ── Scroll reveal ──
-const revealEls = document.querySelectorAll(
-  '.skill-card, .edu-card, .project-card, .contact-card, .section-title'
-);
-
-revealEls.forEach(el => el.classList.add('reveal'));
-
-const observer = new IntersectionObserver(
-  entries => {
-    entries.forEach((entry, i) => {
-      if (entry.isIntersecting) {
-        setTimeout(() => entry.target.classList.add('visible'), i * 80);
-        observer.unobserve(entry.target);
-      }
+  // active nav link spy
+  var spyIds = ['about', 'skills', 'projects', 'education', 'contact'];
+  var links = {};
+  document.querySelectorAll('.nav-links a').forEach(function (a) {
+    var h = a.getAttribute('href');
+    if (h && h.indexOf('#') === 0) links[h.slice(1)] = a;
+  });
+  function spy() {
+    var pos = window.scrollY + window.innerHeight * 0.35;
+    var current = null;
+    spyIds.forEach(function (id) {
+      var s = document.getElementById(id);
+      if (s && s.offsetTop <= pos) current = id;
     });
-  },
-  { threshold: 0.1 }
-);
-
-revealEls.forEach(el => observer.observe(el));
-
-// ── Nav active link highlight ──
-const sections = document.querySelectorAll('section[id]');
-const navLinks = document.querySelectorAll('.nav-links a');
-
-window.addEventListener('scroll', () => {
-  let current = '';
-  sections.forEach(section => {
-    if (window.scrollY >= section.offsetTop - 80) {
-      current = section.getAttribute('id');
-    }
-  });
-  navLinks.forEach(link => {
-    link.style.color = link.getAttribute('href') === `#${current}`
-      ? 'var(--text)'
-      : '';
-  });
-});
-
-// ── Hamburger menu ──
-const hamburger = document.getElementById('hamburger');
-const navLinksEl = document.querySelector('.nav-links');
-
-hamburger.addEventListener('click', () => {
-  navLinksEl.classList.toggle('open');
-});
-
-// Close menu on link click
-navLinksEl.querySelectorAll('a').forEach(a => {
-  a.addEventListener('click', () => navLinksEl.classList.remove('open'));
-});
+    spyIds.forEach(function (id) { if (links[id]) links[id].classList.remove('active'); });
+    if (current && links[current]) links[current].classList.add('active');
+  }
+  window.addEventListener('scroll', spy, { passive: true });
+  spy();
+})();

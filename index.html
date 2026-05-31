@@ -3,284 +3,295 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Lê Trung Kiên – AI Engineer</title>
-  <link rel="stylesheet" href="style.css" />
+  <title>Lê Trung Kiên — AI Engineer</title>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Fira+Code:wght@400;500&display=swap" rel="stylesheet" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Manrope:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
 
-  <!-- NAV -->
-  <nav id="navbar">
-    <div class="nav-inner">
-      <span class="nav-logo">LTK</span>
-      <ul class="nav-links">
-        <li><a href="#about">About</a></li>
-        <li><a href="#skills">Skills</a></li>
-        <li><a href="#education">Education</a></li>
-        <li><a href="#projects">Projects</a></li>
-        <li><a href="#contact">Contact</a></li>
-      </ul>
-      <button class="hamburger" id="hamburger" aria-label="Toggle menu">
-        <span></span><span></span><span></span>
-      </button>
-    </div>
-  </nav>
+<!-- NAV -->
+<header class="nav" id="nav">
+  <div class="wrap nav-inner">
+    <a href="#top" class="brand"><span class="dot"></span>Kien Le</a>
+    <nav class="nav-links" id="navLinks">
+      <a href="#about">About</a>
+      <a href="#skills">Skills</a>
+      <a href="#projects">Projects</a>
+      <a href="#education">Education</a>
+      <a href="#contact" class="nav-cta">Get in touch</a>
+    </nav>
+    <button class="menu-btn" id="menuBtn" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
 
-  <!-- HERO -->
-  <section id="about" class="hero">
-    <div class="hero-content">
-      <p class="hero-greeting">Hi, I'm</p>
-      <h1 class="hero-name">Lê Trung Kiên</h1>
-      <h2 class="hero-title"><span class="typed-text"></span><span class="cursor">|</span></h2>
-      <p class="hero-summary">
-        Fourth-year Computer Science student at <strong>Hanoi University of Science and Technology</strong>,
-        passionate about applied AI — especially NLP and Large Language Models.
-        Experienced in building RAG-based chatbots, fine-tuning transformer models,
-        and deploying AI systems on the cloud. Aiming to become a professional
-        <strong>AI Engineer</strong>.
-      </p>
-      <div class="hero-cta">
-        <a href="#projects" class="btn btn-primary">View Projects</a>
-        <a href="#contact" class="btn btn-outline">Contact Me</a>
+<!-- HERO -->
+<section class="hero" id="top">
+  <div class="hero-bg">
+    <div class="grid-lines"></div>
+    <div class="blob b1"></div>
+    <div class="blob b2"></div>
+  </div>
+  <div class="wrap">
+    <div class="hero-status reveal"><span class="pulse"></span>Open to AI Engineer roles · 2026</div>
+    <h1 class="reveal d1">Lê Trung Kiên<br><span class="grad">AI Engineer.</span></h1>
+    <p class="hero-role reveal d2">Building with LLMs, RAG &amp; deep learning.</p>
+    <p class="hero-lead reveal d2">Fourth-year Computer Science student at HUST focused on applied AI — designing RAG chatbots, fine-tuning transformer models, and shipping LLM-powered pipelines with LangChain &amp; LangGraph.</p>
+    <div class="hero-actions reveal d3">
+      <a href="#projects" class="btn btn-primary">View projects
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M5 12h14M13 6l6 6-6 6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </a>
+      <a href="https://github.com/kienle141204" target="_blank" rel="noopener" class="btn btn-ghost">
+        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12c0 4.42 2.87 8.17 6.84 9.5.5.09.68-.22.68-.48v-1.7c-2.78.6-3.37-1.34-3.37-1.34-.45-1.16-1.11-1.47-1.11-1.47-.91-.62.07-.6.07-.6 1 .07 1.53 1.03 1.53 1.03.89 1.53 2.34 1.09 2.91.83.09-.65.35-1.09.63-1.34-2.22-.25-4.55-1.11-4.55-4.94 0-1.09.39-1.98 1.03-2.68-.1-.25-.45-1.27.1-2.65 0 0 .84-.27 2.75 1.02a9.56 9.56 0 0 1 5 0c1.91-1.29 2.75-1.02 2.75-1.02.55 1.38.2 2.4.1 2.65.64.7 1.03 1.59 1.03 2.68 0 3.84-2.34 4.69-4.57 4.94.36.31.68.92.68 1.85v2.74c0 .27.18.58.69.48A10.01 10.01 0 0 0 22 12c0-5.52-4.48-10-10-10z"/></svg>
+        GitHub
+      </a>
+    </div>
+    <div class="hero-stats reveal d3">
+      <div class="stat"><div class="num">3.41<span class="unit">/4.0</span></div><div class="lbl">GPA at HUST</div></div>
+      <div class="stat"><div class="num">3<span class="unit">+</span></div><div class="lbl">Applied AI projects</div></div>
+      <div class="stat"><div class="num">92<span class="unit">%</span></div><div class="lbl">Model accuracy</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section class="section-pad" id="about">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="eyebrow">About</span>
+      <h2>Turning research ideas into working AI systems.</h2>
+    </div>
+    <div class="about-grid">
+      <div class="about-text reveal">
+        <p>I'm an <strong>AI Engineering</strong>-focused CS student who likes the messy middle between research and production — taking a model from a paper or a notebook and shaping it into something people can actually use.</p>
+        <p>My work spans <strong>Retrieval-Augmented Generation</strong>, fine-tuning transformer models, and orchestrating LLM pipelines with LangChain and LangGraph. I also have research experience applying deep learning and LLMs to <strong>time-series forecasting</strong> problems.</p>
+        <p>I care about clean pipelines, measurable results, and shipping. Right now I'm looking to grow as an AI Engineer on a team that builds real products.</p>
       </div>
-    </div>
-    <div class="hero-visual">
-      <div class="avatar-ring">
-        <div class="avatar-inner">
-          <span class="avatar-emoji">🤖</span>
-        </div>
-      </div>
-      <div class="floating-tag tag-1">PyTorch</div>
-      <div class="floating-tag tag-2">LangChain</div>
-      <div class="floating-tag tag-3">HuggingFace</div>
-      <div class="floating-tag tag-4">LLMs</div>
-    </div>
-  </section>
-
-  <!-- SKILLS -->
-  <section id="skills" class="section">
-    <div class="container">
-      <h2 class="section-title">Technical Skills</h2>
-      <div class="skills-grid">
-
-        <div class="skill-card">
-          <div class="skill-icon">💻</div>
-          <h3>Languages</h3>
-          <div class="tag-list">
-            <span class="tag">Python</span>
-            <span class="tag">C/C++</span>
-            <span class="tag">Java</span>
-            <span class="tag">JavaScript</span>
-            <span class="tag">SQL</span>
-          </div>
-        </div>
-
-        <div class="skill-card">
-          <div class="skill-icon">🧠</div>
-          <h3>AI / ML Frameworks</h3>
-          <div class="tag-list">
-            <span class="tag">PyTorch</span>
-            <span class="tag">LangChain</span>
-            <span class="tag">LangGraph</span>
-            <span class="tag">HuggingFace</span>
-            <span class="tag">Scikit-learn</span>
-            <span class="tag">FastAPI</span>
-          </div>
-        </div>
-
-        <div class="skill-card">
-          <div class="skill-icon">🗄️</div>
-          <h3>Databases</h3>
-          <div class="tag-list">
-            <span class="tag">MySQL</span>
-            <span class="tag">SQL Server</span>
-            <span class="tag">PostgreSQL</span>
-          </div>
-        </div>
-
-        <div class="skill-card">
-          <div class="skill-icon">☁️</div>
-          <h3>Cloud & Tools</h3>
-          <div class="tag-list">
-            <span class="tag">Google Cloud Run</span>
-            <span class="tag">Cloud Storage</span>
-            <span class="tag">BigQuery</span>
-            <span class="tag">Docker</span>
-            <span class="tag">Git</span>
-            <span class="tag">Postman</span>
-          </div>
-        </div>
-
-      </div>
-    </div>
-  </section>
-
-  <!-- EDUCATION -->
-  <section id="education" class="section section-alt">
-    <div class="container">
-      <h2 class="section-title">Education</h2>
-      <div class="edu-card">
-        <div class="edu-logo">🎓</div>
-        <div class="edu-info">
-          <h3>Hanoi University of Science and Technology</h3>
-          <p class="edu-degree">Bachelor of Science in Computer Science</p>
-          <p class="edu-date">September 2022 – Present</p>
-          <div class="gpa-badge">GPA: 3.41 / 4.0</div>
+      <div class="about-card reveal d1">
+        <h3>At a glance</h3>
+        <div class="fact"><span class="k">Location</span><span class="v">Ha Noi, VN</span></div>
+        <div class="fact"><span class="k">Education</span><span class="v">HUST · CS</span></div>
+        <div class="fact"><span class="k">Year</span><span class="v">Final (2022–26)</span></div>
+        <div class="fact"><span class="k">Focus</span><span class="v">AI Engineering</span></div>
+        <div class="focus-tags">
+          <span>RAG</span><span>LLM Pipelines</span><span>Fine-tuning</span><span>Time Series</span>
         </div>
       </div>
     </div>
-  </section>
+  </div>
+</section>
 
-  <!-- PROJECTS -->
-  <section id="projects" class="section">
-    <div class="container">
-      <h2 class="section-title">Projects</h2>
-      <div class="projects-grid">
-
-        <div class="project-card">
-          <div class="project-header">
-            <span class="project-icon">🤖</span>
-            <div class="project-links">
-              <a href="https://github.com/kienle141204" target="_blank" rel="noopener" class="link-btn">GitHub</a>
-            </div>
-          </div>
-          <h3>rag4hust – RAG Chatbot for HUST Students</h3>
-          <p>
-            A Retrieval-Augmented Generation chatbot answering both HUST student queries and general
-            knowledge questions. Processes academic documents with Docling, uses LangChain &amp; LangGraph
-            for the RAG pipeline, and integrates Gemini 2.0 Flash-lite for response generation.
-            Deployed with a Streamlit web interface.
-          </p>
-          <div class="tag-list">
-            <span class="tag">LangChain</span>
-            <span class="tag">LangGraph</span>
-            <span class="tag">Gemini</span>
-            <span class="tag">Streamlit</span>
-            <span class="tag">Docling</span>
-          </div>
+<!-- SKILLS -->
+<section class="skills-bg" id="skills">
+  <div class="wrap section-pad">
+    <div class="sec-head reveal">
+      <span class="eyebrow">Toolkit</span>
+      <h2>Skills &amp; technologies</h2>
+      <p>The languages, frameworks and infrastructure I reach for when building AI systems end-to-end.</p>
+    </div>
+    <div class="skill-grid">
+      <div class="skill-card reveal">
+        <div class="idx">01</div>
+        <h3>Languages</h3>
+        <div class="chips">
+          <span class="chip">Python</span><span class="chip">C / C++</span>
+          <span class="chip">Java</span><span class="chip">JavaScript</span><span class="chip">SQL</span>
         </div>
-
-        <div class="project-card">
-          <div class="project-header">
-            <span class="project-icon">📄</span>
-            <div class="project-links">
-              <a href="https://github.com/kienle141204" target="_blank" rel="noopener" class="link-btn">HuggingFace</a>
-            </div>
-          </div>
-          <h3>CV Section Classifier (Fine-tuned BERT)</h3>
-          <p>
-            Fine-tuned <code>bert-base-uncased</code> to classify CV sections (Personal Info, Work
-            Experience, Skills, Education, etc.) using HuggingFace Transformers and the Trainer API.
-            Achieved <strong>92% accuracy</strong> and macro F1-score of 0.92 on 470 labeled segments.
-          </p>
-          <div class="tag-list">
-            <span class="tag">BERT</span>
-            <span class="tag">HuggingFace</span>
-            <span class="tag">PyTorch</span>
-            <span class="tag">NLP</span>
-          </div>
+      </div>
+      <div class="skill-card reveal d1">
+        <div class="idx">02</div>
+        <h3>ML &amp; LLM Frameworks</h3>
+        <div class="chips">
+          <span class="chip">PyTorch</span><span class="chip">LangChain</span>
+          <span class="chip">LangGraph</span><span class="chip">HuggingFace</span>
+          <span class="chip">Scikit-learn</span><span class="chip">FastAPI</span>
         </div>
-
-        <div class="project-card">
-          <div class="project-header">
-            <span class="project-icon">🌤️</span>
-            <div class="project-links">
-              <a href="https://github.com/kienle141204" target="_blank" rel="noopener" class="link-btn">GitHub</a>
-            </div>
-          </div>
-          <h3>Weather Forecast (GraphCast)</h3>
-          <p>
-            10-day weather forecasting pipeline using Google DeepMind's GraphCast model with ERA5
-            climate data. Automated daily data collection via Google Cloud Run with results stored
-            in Cloud Storage.
-          </p>
-          <div class="tag-list">
-            <span class="tag">GraphCast</span>
-            <span class="tag">ERA5</span>
-            <span class="tag">Cloud Run</span>
-            <span class="tag">Cloud Storage</span>
-            <span class="tag">Python</span>
-          </div>
+      </div>
+      <div class="skill-card reveal">
+        <div class="idx">03</div>
+        <h3>Cloud &amp; Data</h3>
+        <div class="chips">
+          <span class="chip">GCP Cloud Run</span><span class="chip">Cloud Storage</span>
+          <span class="chip">BigQuery</span><span class="chip">MySQL</span><span class="chip">SQL Server</span>
         </div>
-
-        <div class="project-card">
-          <div class="project-header">
-            <span class="project-icon">🧬</span>
-            <div class="project-links">
-              <a href="https://github.com/kienle141204" target="_blank" rel="noopener" class="link-btn">GitHub</a>
-            </div>
-          </div>
-          <h3>Alzheimer Diagnosis</h3>
-          <p>
-            Predictive model for Alzheimer's disease risk from patient examination data and medical
-            records. Applied the Apriori algorithm for association rule discovery, combined with
-            Random Forest and Decision Trees for risk classification.
-          </p>
-          <div class="tag-list">
-            <span class="tag">Scikit-learn</span>
-            <span class="tag">Random Forest</span>
-            <span class="tag">Apriori</span>
-            <span class="tag">pandas</span>
-          </div>
+      </div>
+      <div class="skill-card reveal d1">
+        <div class="idx">04</div>
+        <h3>Tools &amp; Workflow</h3>
+        <div class="chips">
+          <span class="chip">Git</span><span class="chip">Docker</span>
+          <span class="chip">Postman</span><span class="chip">VS Code</span>
+          <span class="chip">PyCharm</span><span class="chip">IntelliJ</span>
         </div>
-
-        <div class="project-card">
-          <div class="project-header">
-            <span class="project-icon">🎵</span>
-            <div class="project-links">
-              <span class="link-btn link-btn-muted">Group Project</span>
-            </div>
-          </div>
-          <h3>Music Streaming App</h3>
-          <p>
-            Full-stack music streaming app with user authentication, playlist management, and
-            real-time audio streaming. Contributed as <strong>Backend Developer</strong> —
-            built user authorization and an intelligent recommendation system using unsupervised
-            ML (HDBSCAN) based on listening preferences.
-          </p>
-          <div class="tag-list">
-            <span class="tag">FastAPI</span>
-            <span class="tag">React</span>
-            <span class="tag">PostgreSQL</span>
-            <span class="tag">HDBSCAN</span>
-          </div>
-        </div>
-
       </div>
     </div>
-  </section>
+  </div>
+</section>
 
-  <!-- CONTACT -->
-  <section id="contact" class="section section-alt">
-    <div class="container">
-      <h2 class="section-title">Get In Touch</h2>
-      <p class="contact-sub">I'm open to internship and full-time AI/ML Engineering opportunities. Feel free to reach out!</p>
-      <div class="contact-cards">
-        <a href="mailto:letrungkien14122004@gmail.com" class="contact-card">
-          <span class="contact-icon">✉️</span>
-          <span class="contact-label">Email</span>
-          <span class="contact-value">letrungkien14122004@gmail.com</span>
-        </a>
-        <a href="https://github.com/kienle141204" target="_blank" rel="noopener" class="contact-card">
-          <span class="contact-icon">💻</span>
-          <span class="contact-label">GitHub</span>
-          <span class="contact-value">github.com/kienle141204</span>
-        </a>
-        <a href="tel:+840946769350" class="contact-card">
-          <span class="contact-icon">📱</span>
-          <span class="contact-label">Phone</span>
-          <span class="contact-value">0946 769 350</span>
-        </a>
+<!-- PROJECTS -->
+<section class="section-pad" id="projects">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="eyebrow">Selected work</span>
+      <h2>Projects</h2>
+      <p>A few things I've built — from production-style RAG systems to research pipelines.</p>
+    </div>
+    <div class="proj">
+
+      <article class="proj-card reveal">
+        <div class="proj-num">01</div>
+        <div class="proj-body">
+          <h3>rag4hust <span class="proj-tag">RAG · Chatbot</span></h3>
+          <p class="desc">A Retrieval-Augmented Generation chatbot that answers both HUST student questions and general knowledge. Academic documents are processed with Docling, the RAG pipeline is built with LangChain &amp; LangGraph, and responses are generated by Gemini 2.0 Flash-lite — served through a Streamlit interface.</p>
+          <div class="proj-tech">
+            <span>LangChain</span><span>LangGraph</span><span>Docling</span>
+            <span>Gemini 2.0</span><span>Streamlit</span>
+          </div>
+        </div>
+        <div class="proj-links">
+          <a class="proj-link" href="https://github.com/kienle141204" target="_blank" rel="noopener">GitHub
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M7 17 17 7M9 7h8v8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </a>
+        </div>
+      </article>
+
+      <article class="proj-card reveal">
+        <div class="proj-num">02</div>
+        <div class="proj-body">
+          <h3>CV Section Classifier <span class="proj-tag">Fine-tuned BERT</span></h3>
+          <p class="desc">A text-classification model that automatically labels CV sections — Personal Info, Work Experience, Skills, Career Objective, Education, Achievements and Job Position. Built by fine-tuning <em>bert-base-uncased</em> with HuggingFace Transformers and the Trainer API, with per-class metrics to keep performance balanced.</p>
+          <div class="proj-tech">
+            <span>BERT</span><span>HuggingFace</span><span>Transformers</span><span>Trainer API</span>
+          </div>
+          <div class="proj-metric">
+            <svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M20 6 9 17l-5-5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            92% accuracy · 0.92 macro F1 on 470 segments
+          </div>
+        </div>
+        <div class="proj-links">
+          <a class="proj-link" href="https://github.com/kienle141204" target="_blank" rel="noopener">GitHub
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M7 17 17 7M9 7h8v8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </a>
+        </div>
+      </article>
+
+      <article class="proj-card reveal">
+        <div class="proj-num">03</div>
+        <div class="proj-body">
+          <h3>Weather Forecast <span class="proj-tag">Deep Learning · MLOps</span></h3>
+          <p class="desc">A 10-day weather-forecasting pipeline built on Google DeepMind's GraphCast model and ERA5 data from the Climate Data Store. Daily data collection is automated with Google Cloud Run triggers, and the collected data is persisted to Google Cloud Storage.</p>
+          <div class="proj-tech">
+            <span>GraphCast</span><span>ERA5</span><span>Cloud Run</span>
+            <span>Cloud Storage</span><span>Python</span>
+          </div>
+        </div>
+        <div class="proj-links">
+          <a class="proj-link" href="https://github.com/kienle141204" target="_blank" rel="noopener">GitHub
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M7 17 17 7M9 7h8v8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </a>
+        </div>
+      </article>
+
+      <article class="proj-card reveal">
+        <div class="proj-num">04</div>
+        <div class="proj-body">
+          <h3>Alzheimer Diagnosis <span class="proj-tag">ML · Healthcare</span></h3>
+          <p class="desc">Predictive model for Alzheimer's disease risk from patient examination data and medical records. Applied the Apriori algorithm for association rule discovery, combined with Random Forest and Decision Trees for risk classification.</p>
+          <div class="proj-tech">
+            <span>Scikit-learn</span><span>Random Forest</span><span>Apriori</span><span>pandas</span>
+          </div>
+        </div>
+        <div class="proj-links">
+          <a class="proj-link" href="https://github.com/kienle141204" target="_blank" rel="noopener">GitHub
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M7 17 17 7M9 7h8v8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </a>
+        </div>
+      </article>
+
+      <article class="proj-card reveal">
+        <div class="proj-num">05</div>
+        <div class="proj-body">
+          <h3>Music Streaming App <span class="proj-tag">Full-stack · ML</span></h3>
+          <p class="desc">Full-stack music streaming app with user authentication, playlist management, and real-time audio streaming. Backend Developer role — built user authorization and an intelligent recommendation system using unsupervised ML (HDBSCAN) based on listening preferences.</p>
+          <div class="proj-tech">
+            <span>FastAPI</span><span>React</span><span>PostgreSQL</span><span>HDBSCAN</span>
+          </div>
+        </div>
+        <div class="proj-links">
+          <a class="proj-link" href="https://github.com/kienle141204" target="_blank" rel="noopener">GitHub
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M7 17 17 7M9 7h8v8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </a>
+        </div>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+<!-- EDUCATION -->
+<section class="section-pad" id="education" style="padding-top:0;">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="eyebrow">Education</span>
+      <h2>Academic background</h2>
+    </div>
+    <div class="edu-card reveal">
+      <div class="edu-logo">HU</div>
+      <div class="edu-info">
+        <h3>Hanoi University of Science &amp; Technology</h3>
+        <div class="deg">B.S. in Computer Science</div>
+        <div class="time">SEP 2022 — PRESENT · HA NOI</div>
+      </div>
+      <div class="edu-gpa">
+        <div class="num">3.41</div>
+        <div class="lbl">GPA / 4.0</div>
       </div>
     </div>
-  </section>
+  </div>
+</section>
 
-  <!-- FOOTER -->
-  <footer>
-    <p>Designed &amp; built by Lê Trung Kiên · 2025</p>
-  </footer>
+<!-- CONTACT -->
+<section class="section-pad" id="contact" style="padding-top:0;">
+  <div class="wrap">
+    <div class="contact-bg reveal">
+      <div class="blob b1" style="width:480px;height:480px;top:-180px;right:-120px;"></div>
+      <div class="blob b2" style="width:380px;height:380px;bottom:-160px;left:-100px;"></div>
+      <div class="contact-inner">
+        <span class="eyebrow">Contact</span>
+        <h2>Let's build something<br>intelligent together.</h2>
+        <p>Open to AI Engineer roles and interesting collaborations. The fastest way to reach me is email.</p>
+        <a href="mailto:letrungkien14122004@gmail.com" class="contact-mail">letrungkien14122004@gmail.com</a>
+        <div class="contact-meta">
+          <div class="cmeta">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.8 19.8 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.8 19.8 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+            <a href="tel:0946769350">0946 769 350</a>
+          </div>
+          <div class="cmeta">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12c0 4.42 2.87 8.17 6.84 9.5.5.09.68-.22.68-.48v-1.7c-2.78.6-3.37-1.34-3.37-1.34-.45-1.16-1.11-1.47-1.11-1.47-.91-.62.07-.6.07-.6 1 .07 1.53 1.03 1.53 1.03.89 1.53 2.34 1.09 2.91.83.09-.65.35-1.09.63-1.34-2.22-.25-4.55-1.11-4.55-4.94 0-1.09.39-1.98 1.03-2.68-.1-.25-.45-1.27.1-2.65 0 0 .84-.27 2.75 1.02a9.56 9.56 0 0 1 5 0c1.91-1.29 2.75-1.02 2.75-1.02.55 1.38.2 2.4.1 2.65.64.7 1.03 1.59 1.03 2.68 0 3.84-2.34 4.69-4.57 4.94.36.31.68.92.68 1.85v2.74c0 .27.18.58.69.48A10.01 10.01 0 0 0 22 12c0-5.52-4.48-10-10-10z"/></svg>
+            <a href="https://github.com/kienle141204" target="_blank" rel="noopener">github.com/kienle141204</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
 
-  <script src="script.js"></script>
+<!-- FOOTER -->
+<footer>
+  <div class="wrap foot-inner">
+    <a href="#top" class="brand"><span class="dot"></span>Lê Trung Kiên</a>
+    <div class="foot-links">
+      <a href="#about">About</a>
+      <a href="#projects">Projects</a>
+      <a href="#contact">Contact</a>
+    </div>
+    <div class="foot-copy">© 2026 · Built with care</div>
+  </div>
+</footer>
+
+<script src="script.js"></script>
 </body>
 </html>
